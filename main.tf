@@ -18,14 +18,8 @@ resource "aws_vpc" "vpc" {
   instance_tenancy     = "default"
 
   tags = {
-    Name = format("%s-%s-vpc", var.prefix, random_pet.this.id)
+    Name = "iac-lab-dipali"
   }
-}
-
-variable "prefix" {
-  type        = string
-  description = "Prefix to many of the resources created which helps as an identifier, could be company name, solution name, etc"
-  default     = "iac-lab-demo"
 }
 
 variable "region" {
